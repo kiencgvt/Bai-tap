@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey</title>
+    <style>
+        table {border-collapse: collapse;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+        th, td {border-collapse: collapse;
+            text-align: center;
+            height: 40px;
+        }
+        tr:nth-child(odd) {background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <form action="D:/">
+        <h2>Market Research Survey</h2>
+        <p>Please take a few moments to complete this satisfaction survey.</p>
+        <hr style="border-style: dotted">
+        <h4>What is your age range?</h4> <br>
+        <select name="tuoi" id="tuoi">
+            <option value="khoangtuoi">18-24</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+        </select>
+        <h4>What is your yearly income range?</h4> <br>
+        <select name="tien" id="tien">
+            <option value="khoangtuoi">$0 - $25,000</option>
+            <option value="0">$0</option>
+            <option value="$5000">$5000</option>
+            <option value="$10000">$10000</option>
+            <option value="$15000">$15000</option>
+            <option value="$20000">$20000</option>
+            <option value="$25000">$25000</option>
+        </select>
+        <h4>Gender</h4>
+        <laybel><input type="radio" name="gioitinh" value="male">Male</laybel>
+        <br>
+        <laybel><input type="radio" name="gioitinh" value="female">Female</laybel>
+        <h4>Which of the following product have your purchased in the last 2 months. Please check all that apply.</h4>
+        <laybel><input type="checkbox" name="san pham" value="product 1">Product 1</laybel>
+        <br>
+        <laybel><input type="checkbox" name="san pham" value="product 2">Product 2</laybel>
+        <br>
+        <laybel><input type="checkbox" name="san pham" value="product 3">Product 3</laybel>
+        <h4>How often would you use our new product?</h4>
+        <laybel><input type="radio" name="thoigiansd" value="hangngay">Daily</laybel>
+        <br>
+        <laybel><input type="radio" name="thoigiansd" value="hangtuan">Weekly</laybel>
+        <br>
+        <laybel><input type="radio" name="thoigiansd" value="hangthang">Monthly</laybel>
+        <h4>What would you pay for the new product?</h4>
+        <laybel>$ <input type="text" name="tien" size="10"> . <input type="text" name="tien sau dau phay" size="3"></laybel>
+        <h4>What features would you like to see in the new product.</h4>
+        <laybel><textarea name="tinh nang" id="tinh nang" cols="10" rows="10" style="width: 100%"></textarea></laybel>
+        <p>Please rate your level of agreement with the following statements.</p>
+        <table>
+            <tr>
+                <th></th>
+                <th>Strongly Disagree</th>
+                <th>Disagree</th>
+                <th>Agree</th>
+                <th>Strongly Agree</th></tr>
+            <tr><th style="text-align: left">Our product are priced fairly.</th>
+                <td><input type="radio" name="danh gia" value="1"><br>1</td>
+                <td><input type="radio" name="danh gia" value="2"><br>2</td>
+                <td><input type="radio" name="danh gia" value="3"><br>3</td>
+                <td><input type="radio" name="danh gia" value="4"><br>4</td>
+            </tr>
+            <tr><th style="text-align: left">Our product are high quality.</th>
+            <td><input type="radio" name="chat luong" value="1"><br>1</td>
+            <td><input type="radio" name="chat luong" value="2"><br>2</td>
+            <td><input type="radio" name="chat luong" value="3"><br>3</td>
+            <td><input type="radio" name="chat luong" value="4"><br>4</td>
+            </tr>
+            <tr>
+                <th style="text-align: left">You would recommend our produc to a friend or coworker.</th>
+                <td><input type="radio" name="gioi thieu" value="1"><br>1</td>
+                <td><input type="radio" name="gioi thieu" value="2"><br>2</td>
+                <td><input type="radio" name="gioi thieu" value="3"><br>3</td>
+                <td><input type="radio" name="gioi thieu" value="4"><br>4</td>
+            </tr>
+        </table>
+        <laybel><input style="font-size: 25px" type="submit" name="submit" value="Submit"></laybel>
+    </form>
+</body>
+</html>
