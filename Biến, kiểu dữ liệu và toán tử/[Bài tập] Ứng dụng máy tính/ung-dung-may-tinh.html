@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+<form>
+    <h3>Caculator</h3>
+    <input type="number" name="nb1" value="12" id="nb1">
+    <input type="number" name="nb2" value="12" id="nb2">
+    <br>
+    <br>
+    <button type="button" onclick="tinhtoan('cong')">Addition(+)</button>
+    <button type="button" onclick="tinhtoan('tru')">Subtraction(-)</button>
+    <button type="button" onclick="tinhtoan('nhan')">Multiplication(X)</button>
+    <button type="button" onclick="tinhtoan('chia')">Division(/)</button>
+    <!--<select name="tinhtoan">
+        <option value="+"></option>
+        <option value="-"></option>
+        <option value="*"></option>
+        <option value="/"></option>
+    </select>-->
+</form>
+<script>
+    function tinhtoan(c) {
+        let result, a, b;
+        a = parseFloat(document.getElementById('nb1').value);
+        b = parseFloat(document.getElementById('nb2').value);
+        /*switch ('tinhtoan'){
+            case '+':
+                result = a + b;
+                document.write('Result Addition: ' + result);
+                break;
+            case '-':
+                result = a - b;
+                document.write('Result Subtraction: ' + result);
+                break;
+            case '*':
+                result = a * b;
+                document.write('Result Multiplication: ' + result);
+                break;
+            case '/':
+                result = a / b;
+                document.write('Result Division: ' + result);
+                break
+        }*/
+        if (c == 'cong') {
+            result = a + b;
+            document.write('Result Addition: ' + result);
+            }
+        else if (c == 'tru') {
+            result = a - b;
+            document.write('Result Subtraction: ' + result);
+        }
+        else if (c == 'nhan') {
+            result = a * b;
+            document.write('Result Multiplication: ' + result);
+        }
+        else if (c == 'chia') {
+            result = a / b;
+            document.write('Result Division: ' + result);
+        }
+    }
+</script>
+</body>
+</html>
