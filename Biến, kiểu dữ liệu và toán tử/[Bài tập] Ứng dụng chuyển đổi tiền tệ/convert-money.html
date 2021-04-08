@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+<form>
+    <table>
+        <colgroup>
+            <col>
+            <col style="width: 200px">
+            <col style="width: 200px">
+        </colgroup>
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <td><input type="number" name="number" value="1" id="number"></td>
+            <td style="text-align: center">
+                <select name="tienbichuyen" style="width: 125px" id="tienbichuyen">
+                    <option value="23000" selected>VietNam</option>
+                    <option value="1">USD</option>
+                    <option value="0.85">Euro</option>
+                </select>
+            </td>
+            <td style="text-align: center">
+                <select name="tienchuyen" style="width: 125px" id="tienchuyen">
+                    <option value="23000">VietNam</option>
+                    <option value="1" selected>USD</option>
+                    <option value="0.85">Euro</option>
+                </select>
+            </td>
+            <td><input type="button" value="Convert" style="background-color: blue; color: white" onclick="doitien()"></td>
+        </tr>
+    </table>
+</form>
+<script>
+    function doitien(){
+        let number, tienbichuyen,tienchuyen,output;
+        number = document.getElementById('number').value;
+        tienbichuyen = document.getElementById('tienbichuyen').value;
+        tienchuyen = document.getElementById('tienchuyen').value;
+        output = number*(tienchuyen/tienbichuyen);
+        document.write(output);
+    }
+</script>
+</body>
+</html>
