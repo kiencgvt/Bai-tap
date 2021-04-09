@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    login = prompt('Nhập vào tên đăng nhập', 'Kiên')
+let message = (login == 'Employee') ?
+    'Hello' :
+    (login == 'Director') ?
+        'Greetings' :
+        (login == '') ?
+            'No login' :
+            '';
+    alert(message);
+</script>
+</body>
+</html>
