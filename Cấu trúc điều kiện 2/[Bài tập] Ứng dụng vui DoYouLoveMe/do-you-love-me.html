@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng vui DoYouLoveMe</title>
+</head>
+<body>
+<div align="center">
+    <h2>Do you love me?</h2>
+    <button onclick="yeu()" style="position: relative; right: 40px">YES</button>
+    <button onmouseover="khongyeu()" id="no" style="position: absolute; left: 960px">NO</button>
+</div>
+<script>
+function yeu() {
+    alert("<3");
+}
+function khongyeu() {
+        let chieucao = window.innerHeight;
+        let chieurong = window.innerWidth;
+        document.getElementById("no").style.left = Math.floor(Math.random() * chieurong) + "px";
+        document.getElementById("no").style.top = Math.floor(Math.random() * chieucao) + "px";
+}
+</script>
+</body>
+</html>
