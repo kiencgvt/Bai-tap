@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bảng cửu chương</title>
+    <style>
+        td {
+            border: 2px solid black;
+        }
+        table {
+            border-spacing: 10px;
+        }
+    </style>
+</head>
+<body>
+<table id="bang9chuong" align="center">
+</table>
+<script>
+    let result = "";
+    for (let i = 1; i < 10; i++) {
+        result += "<tr>";
+        for (let j = 2; j < 10; j++) {
+            result += "<td>";
+            result += j + "x" + i + "=" + i * j;
+            result += "</td>";
+        }
+        result += "</tr>";
+    }
+    document.getElementById("bang9chuong").innerHTML = result;
+</script>
+</body>
+</html>
