@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyên tố</title>
+</head>
+<body>
+<script>
+    let numbers = +prompt("Số lượng số nguyên tố cần in ra là");
+    let N = 3;
+    let hienthi = "0 1 2 ";
+    let i = 2;
+    for (let n = 3; n < numbers;) {
+        while (i < N) {
+            if (N % i !== 0) {
+                let M = N - 1;
+                if (i === M) {
+                    hienthi += N + " ";
+                    N++;
+                    n++;
+                    i = 2;
+                }
+                else i++;
+            }
+            else {
+                N++;
+                i = 2;
+            }
+            if (n == numbers) {
+                break;
+            }
+        }
+    }
+    document.write(hienthi);
+    /*while (count < numbers) {
+        do {
+            if (N % i !== 0) {
+                if (i < (N-1)) {
+                }
+                else {
+                    document.getElementById("songuyento").innerHTML += N;
+                    N++;
+                    count++;
+                }
+            }
+            else {break;}
+            i++;
+        }
+        while (i < N)
+    }*/
+</script>
+</body>
+</html>
