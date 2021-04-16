@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<form>
+    <label>Nhập từ cần tìm kiếm</label>
+    <input type="text" id="tucandich">
+    <button type="button" onclick="dich()">Dịch</button>
+</form>
+<script>
+    viet = ["Xin chào", "Con chó", "Con mèo"];
+    anh = ["hello", "dog", "cat"];
+    function dich() {
+        let tucandich = document.getElementById("tucandich").value;
+        if (anh.includes(tucandich) === true) {
+            let vitri = anh.indexOf(tucandich);
+            alert(viet[vitri]);
+        }
+        else alert("Từ này không có trong từ điển");
+        document.getElementById("tucandich").value = "";
+    }
+</script>
+</body>
+</html>
