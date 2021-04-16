@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chấm điểm</title>
+</head>
+<body>
+<script>
+    let socauhoi = +prompt("Nhập số câu hỏi:");
+    let somade = +prompt("Nhập số lượng mã đề:");
+        for (let i = 1; i<= somade; i++) {
+            let sohs = +prompt("Nhập số học sinh làm mã đề " + i + ":");
+            while (true) {
+                let nhapda = true
+                var dapan = prompt("Nhập đáp án mã đề " + i + ":");
+                if (dapan.length !== socauhoi) {
+                    alert("Số đáp án không khớp với số câu hỏi!" + " Số đáp án đang nhập là: " + dapan.length + ". Vui lòng nhập lại đáp án!");
+                }
+                else {
+                    for (let i = 0; i < socauhoi; i++) {
+                        if (dapan[i] !== 'a') {
+                            if (dapan[i] !== 'b') {
+                                if (dapan[i] !== 'c') {
+                                    if (dapan[i] !== 'd') {
+                                        nhapda = false;
+                                        alert("Có đáp án không phải A, B, C, D");
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    if (nhapda == false) {
+                        continue;
+                    }
+                    else break;
+                }
+            }
+            for (let i = 1; i <= sohs; i++) {
+                while (true) {
+                    let nhapda = true
+                    var dapanhs = prompt("Nhập đáp án của học sinh " + i + ':');
+                    if (dapanhs.length !== socauhoi) {
+                        alert("Số đáp án không khớp với số câu hỏi!" + " Số đáp án đang nhập là: " + dapanhs.length + ". Vui lòng nhập lại đáp án!");
+                    }
+                    else {
+                        for (let i = 0; i < socauhoi; i++) {
+                            if (dapanhs[i] !== 'a') {
+                                if (dapanhs[i] !== 'b') {
+                                    if (dapanhs[i] !== 'c') {
+                                        if (dapanhs[i] !== 'd') {
+                                            if (dapanhs[i] === 'o') {
+                                                continue;
+                                            }
+                                            else {
+                                                nhapda = false;
+                                                alert("Có đáp án không phải A, B, C, D");
+                                                break;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        if (nhapda == false) {
+                            continue;
+                        }
+                        else break;
+                    }
+                }
+                let diem = 0;
+                for (let i = 0; i < socauhoi; i++) {
+                    if (dapan[i] === dapanhs[i]) {
+                        diem += 10/socauhoi;
+                    }
+                }
+                alert("Điểm của học sinh " + i + " là:  " + diem + " điểm");
+            }
+        }
+</script>
+</body>
+</html>

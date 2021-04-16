@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let input = prompt("Nhập vào số:");
+    let arrinput = [];
+    for (let i = 0; i < input.length; i++) {
+        arrinput[i] = input[i];
+    }
+    for (let j = 0; j < arrinput.length; j++) {
+        if (arrinput[j] % 2 === 0 && arrinput[j+1] % 2 === 0) {
+            arrinput[j] += "-";
+        }
+    }
+    document.write(arrinput.join(""))
+</script>
+</body>
+</html>
