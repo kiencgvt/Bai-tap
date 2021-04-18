@@ -6,28 +6,13 @@
 </head>
 <body>
 <script>
-    let num = prompt("nhập số lượng số nguyên tố cần in ra:")
-    if (num <= 0) {
-        alert("vui lòng nhập một số nguyên dương")
-    } else {
-        let count = 0;
-        let N = 2;
-        while (true) {
-            let mark = 1;
-            let i;
-            for (i = 2; i <= Math.sqrt(N); i++) {
-                if (N % i == 0) {
-                    mark = 0;
-                    break;
-                }}
-            if(mark === 1) {
-                count++;
-                document.write(N + ',');
-            }
-            if (count >= num) {
-                break;
-            } N++;
-        }
+    var x = 7;
+    var message = 'boom';
+
+    while(x>message.length)
+    {
+        console.log(message+x);
+        x--;
     }
 </script>
 </form>
