@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi giữa feet và meters</title>
+</head>
+<body>
+<input type="number" onchange="chuyenDoi()" id="inputdo">
+<select name="donvi1" id="donvi1">
+    <option value="1">feet</option>
+    <option value="3.279">meters</option>
+</select>
+<input type="number" id="outputdo">
+<select name="donvi2" id="donvi2">
+    <option value="1">feet</option>
+    <option value="3.279">meters</option>
+</select>
+<script>
+    function chuyenDoi() {
+        let dauVao = document.getElementById("inputdo").value;
+        let donVi1 = document.getElementById("donvi1").value;
+        let donVi2 = document.getElementById("donvi2").value;
+        document.getElementById("outputdo").value = dauVao * donVi2 / donVi1;
+    }
+</script>
+</body>
+</html>
