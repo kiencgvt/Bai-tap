@@ -1,10 +1,12 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Scoping Example</title>
+    <meta charset="UTF-8">
+    <title>Tạo và gọi hàm</title>
 </head>
 <body>
-<script type="text/javascript">
+<script>
+
     function processConfirm(answer) {
         let result = "";
         if (answer) {
@@ -14,6 +16,7 @@
         }
         return result;
     }
+
     let confirmAnswer = confirm("Shall we play a game?");
     let theAnswer = processConfirm(confirmAnswer);
     alert(theAnswer);
