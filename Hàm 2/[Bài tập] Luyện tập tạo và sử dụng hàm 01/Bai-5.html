@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let Star = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let Constellation = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    let Starname = prompt("Nhập vào tên ngôi sao:");
+    SearchConstellation(Starname);
+    function SearchConstellation(name) {
+        if (typeof name === "string") {
+            if (Star.includes(name)) {
+                let posStar = Star.indexOf(name);
+                alert("Tên chòm sao là: " + Constellation[posStar]);
+            }
+            else {
+                alert("Không có chòm sao tương ứng hoặc tên sao sai!");
+            }
+        }
+    }
+</script>
+</body>
+</html>
