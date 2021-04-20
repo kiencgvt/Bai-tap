@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let soMot = +prompt("Nhập vào số nguyên đầu tiên");
+    let soHai = +prompt("Nhập vào số nguyên thứ 2");
+    let soBa = +prompt("Nhập vào số nguyên thứ 3");
+    min(soMot,soHai,soBa);
+    function min(a,b,c) {
+        if (Number.isInteger(a) && Number.isInteger(b) && Number.isInteger(c)) {
+            let min = a;
+            if (b < min) {
+                min = b;
+                alert("Min = " + b);
+            }
+            else {
+                if (c < min) {
+                    min = c;
+                    alert("Min = " + c);
+                }
+                else {
+                    alert("Min = " + a);
+                }
+            }
+        }
+        else {
+            alert("Không phải số nguyên");
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+</head>
+<body>
+<script>
+    let arr = ["a","b","c","b","a","c","c","b","a","c","b","d","d"];
+    let kyTu = prompt("Nhập vào một ký tự bất kỳ:");
+    checkKyTu(arr,kyTu);
+    function checkKyTu(a,b) {
+        let dem = 0;
+        for (let i = 0; i < a.length; i++) {
+            if (b === a[i]) {
+                dem += 1;
+            }
+        }
+        alert(dem);
+    }
+</script>
+</body>
+</html>

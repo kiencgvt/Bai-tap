@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<script>
+    let soMot = +prompt("Nhập vào số nguyên thứ nhất:");
+    let soHai = +prompt("Nhập vào số nguyên thứ 2:");
+    let inputNumber = {no1: soMot, no2: soHai};
+    let checkInt = true;
+    function swapNumber(a) {
+        if (Number.isInteger(a.no1) && Number.isInteger(a.no2)) {
+            let b = a.no1;
+            a.no1 = a.no2;
+            a.no2 = b;
+        }
+        else {
+            checkInt = false;
+        }
+    }
+    swapNumber(inputNumber);
+    if (checkInt === true) {
+        alert("Số thứ nhất là: " + inputNumber.no1);
+        alert("Số thứ hai là: " + inputNumber.no2);
+    }
+    else {
+        alert("Không phải là số nguyên!");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<script>
+    let inputNumber = +prompt("Nhập vào một số nguyên:")
+    checkInput(inputNumber);
+    function checkInput(a) {
+        if (Number.isInteger(a)) {
+            if (a > 0) {
+                alert("True");
+            }
+            else if (a < 0) {
+                alert("False");
+            }
+            else {
+                alert("Số 0 không là số nguyên dương cũng không là số nguyên âm")
+            }
+        }
+        else {
+            alert("Không phải là số nguyên!")
+        }
+    }
+</script>
+</body>
+</html>

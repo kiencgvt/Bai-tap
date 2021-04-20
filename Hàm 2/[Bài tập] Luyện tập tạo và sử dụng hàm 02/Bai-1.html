@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    let inputnumber = +prompt("Nhập vào số cần bình phương:");
+    binhPhuong(inputnumber);
+    function binhPhuong(a) {
+        if (isNaN(a)) {
+            alert("Không phải là số")
+        }
+        else {
+            let bp = a * a;
+            alert("Bình phương của " + a + " là: " + bp);
+        }
+    }
+</script>
+</body>
+</html>
