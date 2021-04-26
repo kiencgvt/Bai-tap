@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(inputT) {
+            this.inputT = inputT;
+        };
+        convertF = function () {
+            let F = 9/5 * this.inputT + 32;
+            return F;
+        };
+        convertK = function () {
+            let K = this.inputT + 273.15;
+            return K;
+        };
+    };
+    let nhietdo = new Temperature(25);
+    document.write(nhietdo.convertF() + "<br/>" + nhietdo.convertK());
+</script>
+</body>
+</html>
