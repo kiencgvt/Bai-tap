@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả điện thoại</title>
+</head>
+<body>
+<script>
+    class Mobile {
+        constructor(name) {
+            this.name = name;
+            this.statusBattery = 100;
+            this.message = "";
+            this.inbox = [];
+            this.outbox = [];
+            this.status = false;
+        };
+        checkStatus = function () {
+            if (this.status === false) {
+                alert("Điện thoại " + this.name + " đang tắt" )
+            }
+            else {
+                alert("Điện thoại " + this.name + " đang mở")
+            }
+            }
+        turnOn = function () {
+            this.status = true;
+        };
+        turnOff = function () {
+            this.status = false;
+        };
+        chargeBattery = function () {
+            if (this.status === false) {
+                alert("Điện thoại " + this.name + " đang tắt. Không sử dụng được!")
+            }
+            else {
+                this.statusBattery += 1;
+            }
+        };
+        writeMessage = function (txt) {
+            if (this.status === false) {
+                alert("Điện thoại " + this.name + " đang tắt. Không sử dụng được!")
+            }
+            else {
+                this.message = txt;
+                this.statusBattery--
+            }
+        };
+        sendMessage = function (phone) {
+            if (this.status === false) {
+                alert("Điện thoại " + this.name + " đang tắt. Không sử dụng được!")
+            }
+            else {
+                phone.inbox.push(this.message);
+                this.outbox.push(this.message);
+                this.statusBattery--
+            }
+        };
+        getInbox = function () {
+            if (this.status === false) {
+                alert("Điện thoại " + this.name + " đang tắt. Không sử dụng được!")
+            }
+            else {
+                return this.inbox;
+                this.statusBattery--;
+            }
+        };
+        getOutbox = function () {
+            if (this.status === false) {
+                alert("Điện thoại " + this.name + " đang tắt. Không sử dụng được!")
+            }
+            else {
+                return this.outbox;
+                this.statusBattery--;
+            }
+        }
+        }
+    let LG = new Mobile("LG G7");
+    let IP = new Mobile("Iphone XII Pro Max");
+    LG.turnOn();
+    IP.turnOn();
+    LG.writeMessage("Đố anh biết em đang nghĩ gì?")
+    LG.sendMessage(IP);
+    alert(LG.getOutbox());
+    alert(IP.getInbox());
+    console.log(LG.statusBattery);
+    LG.chargeBattery();
+</script>
+</body>
+</html>
