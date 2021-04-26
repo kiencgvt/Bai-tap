@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phát triển chương trình thể hiện sự tương tác giữa hai đối tượng</title>
+</head>
+<body>
+<script>
+  let SwitchButton = {
+      status : false,
+      switchOff : function () {
+          this.status = false;
+      },
+      switchOn : function () {
+          this.status = true;
+      },
+      connectToLamp : function (ElectricLamp) {
+          if (this.status === false) {
+              ElectricLamp.status = false;
+              console.log("Đèn tắt");
+          }
+          else {
+              ElectricLamp.status = true;
+              console.log("Đèn mở");
+          }
+      }
+  }
+  let ElectricLamp = {
+      status : false,
+      turnOff : function () {
+          this.status = false;
+      },
+      turnOn : function () {
+          this.status = true;
+      },
+  }
+  SwitchButton.switchOn();
+  SwitchButton.connectToLamp(ElectricLamp);
+</script>
+</body>
+</html>
