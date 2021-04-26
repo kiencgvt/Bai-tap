@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+<canvas id="myCanvas" height="1080px" width="1920px"></canvas>
+<script>
+    class Rectangle {
+        constructor(width, length) {
+            this.width = width;
+            this.length = length;
+        };
+        setSize = function (width, length) {
+            this.width = width;
+            this.length = length;
+        }
+        area = function () {
+            return this.width * this.length;
+        };
+        perimeter = function () {
+            return (this.width + this.length) * 2;
+        };
+        draw = function () {
+            let c = document.getElementById("myCanvas");
+            let ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.arc(500,1000, 50, 0 ,2 * Math.PI);
+            ctx.stroke();
+        }
+    }
+    let hcn = new Rectangle(40, 50);
+    hcn.draw();
+    hcn.setSize(60, 70)
+    document.write(hcn.area() + "<br/>");
+    document.write(hcn.perimeter());
+</script>
+</body>
+</html>
