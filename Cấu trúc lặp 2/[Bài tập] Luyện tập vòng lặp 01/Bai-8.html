@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<input type="button" value="Chơi" onclick="doanxem()">
+<script>
+  function doanxem() {
+    let number = +prompt("Đoán trong số trong khoảng từ 1 đến:");
+    let result = Math.floor(Math.random() * number) + 1;
+    for (let i = 0; i < 3; i++) {
+      let guessNumber = +prompt("Nhập số đoán:");
+      if (guessNumber === result) {
+        alert("Chúc mừng! Kết thúc lượt chơi.");
+        break;
+      }
+      else if (guessNumber < result) {
+        alert("Nhỏ hơn! Đoán lại.");
+      }
+      else {
+        alert("Lớn hơn! Đoán lại.");
+      }
+    }
+  }
+</script>
+</body>
+</html>

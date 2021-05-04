@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phát triển trò chơi cờ ca-ro</title>
+    <style>
+        div.a {
+            position: absolute;
+            border: 1px solid #0c0101;
+            text-align: center;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+<div id="baongoai" style="width: 600px; height: 600px; position: absolute; left: 50%; top: 75px" class="a"></div>
+<input type="reset" value="Chơi lại" style="left: 800px; position: absolute">
+<script>
+    let data = "";
+    for (let i = 0; i < 20; i++) {
+        for (let j = 0; j < 20; j++) {
+            data += "<div id='" + i + "," + j + "' style='left: " + j*30 + "px; top: " + i*30 + "px; width: 30px; height: 30px;' class='a' onclick='tick(" + i + ", " + j + ")'></div>";
+        }
+        data += "<br>";
+    }
+    document.getElementById("baongoai").innerHTML = data;
+    let arr = [];
+    for (let i = 0; i < 20; i++) {
+        arr[i] = [];
+        for (let j = 0; j < 20; j++) {
+            arr[i][j] = "";
+        }
+    }
+    let kien = false;
+    function tick(i, j) {
+        let id = i + "," + j;
+        if (kien === false) {
+            if (document.getElementById(id).textContent === "") {
+                arr[i][j] = "X";
+                document.getElementById(id).style.color = "red"
+                document.getElementById(id).innerHTML = "X";
+                kien = true;
+            }
+            else {
+                alert("Đánh lại đê!");
+            }
+        }
+        else {
+            if (document.getElementById(id).textContent === "") {
+                arr[i][j] = "O";
+                document.getElementById(id).innerHTML = "O";
+                kien = false;
+            }
+            else {
+                alert("Đánh lại đê!");
+            }
+        }
+        checkResult();
+    }
+    function checkResult() {
+        for (let i = 0; i < 20; i++) {
+            for (let j = 0; j < 20; j++) {
+                if ((arr[i][j] === "X" || arr[i][j] === "O") &&
+                    ((arr[i][j] === arr[i][j+1] && arr[i][j+1] === arr[i][j+2] && arr[i][j+2] === arr[i][j+3] && arr[i][j+3] === arr[i][j+4]) ||
+                    (arr[i][j] === arr[i+1][j] && arr[i+1][j] === arr[i+2][j] && arr[i+2][j] === arr[i+3][j] && arr[i+3][j] === arr[i+4][j]) ||
+                    (arr[i][j] === arr[i+1][j+1] && arr[i+1][j+1] === arr[i+2][j+2] && arr[i+2][j+2] === arr[i+3][j+3] && arr[i+3][j+3] === arr[i+4][j+4]) ||
+                    (arr[i][j] === arr[i+1][j-1] && arr[i+1][j-1] === arr[i+2][j-2] && arr[i+2][j-2] === arr[i+3][j-3] && arr[i+3][j-3] === arr[i+4][j-4])))
+                {
+                    if (arr[i][j] === "X") {
+                        alert("Người chơi thứ nhất thắng!")
+                    }
+                    else {
+                        alert("Người chơi thứ hai thắng!")
+                    }
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<script>
+  let numberone = 0;
+  let numbertwo = 1;
+  while (true) {
+    let numberthree = numberone + numbertwo;
+    if (numberthree % 5 === 0) {
+      document.write(numberthree);
+      break;
+    }
+    numberone = numbertwo;
+    numbertwo = numberthree;
+  }
+</script>
+</body>
+</html>

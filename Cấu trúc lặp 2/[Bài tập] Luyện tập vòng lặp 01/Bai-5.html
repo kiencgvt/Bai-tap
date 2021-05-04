@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+  let count = 1;
+  let numberone = 0;
+  let numbertwo = 1;
+  let sum = 1;
+  while (count <= 19) {
+    let numberthree = numberone + numbertwo;
+    numberone = numbertwo;
+    numbertwo = numberthree;
+    sum += numberthree;
+    count++;
+  }
+  document.write(sum);
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    let count = 1;
+    let numberone = 0;
+    let numbertwo = 1;
+    document.write(numbertwo + ", ")
+    while (count <= 19) {
+        let numberthree = numberone + numbertwo;
+        document.write(numberthree + ", ");
+        numberone = numbertwo;
+        numbertwo = numberthree;
+        count++;
+    }
+</script>
+</body>
+</html>
