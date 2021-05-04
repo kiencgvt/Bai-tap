@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+  let number = +prompt("Giai thừa của:");
+  let factorial = 1;
+  if (number === 0) {
+    alert("Bằng: " + factorial);
+  }
+  else if (number > 0) {
+    for (let i = 1; i <= number; i++) {
+      factorial *= i;
+    }
+    alert("Bằng: " + factorial);
+  }
+  else {
+    alert("Phải nhập số nguyên dương!");
+  }
+</script>
+</body>
+</html>

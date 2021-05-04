@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<script>
+  let PV = +prompt("Nhập số tiền cho vay:");
+  let month = +prompt("Nhập số tháng cho vay:");
+  let interestRate = +prompt("Nhập lãi suất hàng tháng:") / 100;
+  let FV = PV * ((1 + interestRate)**month);
+  let interest = FV - PV;
+  alert("Số tiền lãi nhận được là: " + interest);
+</script>
+</body>
+</html>

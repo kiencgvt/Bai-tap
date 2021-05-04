@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    let count = 1;
+    let number = +prompt("Nhập số số fibonacci cần in ra: ")
+    let numberone = 0;
+    let numbertwo = 1;
+    if (number === 1) {
+        document.write(numbertwo);
+    }
+    else if (number > 1) {
+        document.write(numbertwo + ", ");
+        while (count <= (number - 1)) {
+            let numberthree = numberone + numbertwo;
+            document.write(numberthree + ", ");
+            numberone = numbertwo;
+            numbertwo = numberthree;
+            count++;
+        }
+    }
+    else {
+        alert("Nhập sai!")
+    }
+</script>
+</body>
+</html>
