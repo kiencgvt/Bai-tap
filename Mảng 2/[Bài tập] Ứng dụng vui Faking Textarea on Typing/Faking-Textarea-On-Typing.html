@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng vui Faking Textarea on Typing</title>
+</head>
+<body>
+<h1>Type anthing slowly</h1>
+<textarea name="textArea" id="text" cols="40" rows="10" onkeyup="display()"></textarea>
+<script>
+    let i = 0;
+    let textValue = "Quân óc chó!";
+    let data = "";
+
+    function display() {
+        if (i < textValue.length) {
+            console.log(document.getElementById("text").value);
+            data += textValue[i];
+            document.getElementById("text").value = data;
+            i++;
+        } else {
+            i = 0;
+            data = "";
+            display();
+        }
+    }
+</script>
+</body>
+</html>
