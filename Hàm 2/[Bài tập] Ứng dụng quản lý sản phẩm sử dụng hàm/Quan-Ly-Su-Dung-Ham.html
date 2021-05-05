@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng quản lý sản phẩm sử dụng hàm</title>
+</head>
+<body>
+<h2>Add New Product</h2>
+<div>
+    <input type="text" placeholder="New Product" id="nameProduct">
+    <button onclick="AddProduct()">Add</button>
+</div>
+<h2>Display All Product</h2>
+<table>
+    <tr>
+        <th>Product Name</th>
+        <td style="position: absolute; left: 1000px" id="products"></td>
+    </tr>
+</table>
+<table id="tableProduct"></table>
+<script>
+    let nameProduct = [];
+    function DisplayProduct() {
+        let data = "";
+        for (let i = 0; i < nameProduct.length; i++) {
+            data += "<tr>" +
+                "<td>" + nameProduct[i] + "</td>" +
+                "<td><button type='button' onclick='EditProduct(" + i + ")'>Edit</button></td>" +
+                "<td><button type='button' onclick='DeleteProduct(" + i + ")'>Delete</button></td>" +
+            "</tr><br>";
+        }
+        document.getElementById("tableProduct").innerHTML = data;
+        if (nameProduct.length > 1) {
+            document.getElementById("products").innerHTML = nameProduct.length + " products";
+        }
+        else {
+            document.getElementById("products").innerHTML = nameProduct.length + " product";
+        }
+    }
+    function AddProduct() {
+        let a = document.getElementById("nameProduct").value;
+        nameProduct.push(a);
+        document.getElementById("nameProduct").value = "";
+        DisplayProduct();
+    }
+    function EditProduct(i) {
+        let a = prompt("Nhập tên sau khi sửa: ");
+        nameProduct[i] = a;
+        DisplayProduct();
+    }
+    function DeleteProduct(i) {
+        nameProduct.splice(i, 1);
+        DisplayProduct();
+    }
+    DisplayProduct();
+</script>
+</body>
+</html>
