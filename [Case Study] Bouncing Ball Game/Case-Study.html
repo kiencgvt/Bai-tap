@@ -18,7 +18,7 @@
     let Ball = {
         x: 400,
         y: 570,
-        r : 10,
+        r: 10,
         speedX: 1,
         speedY: -1,
         alpha: function (a) {
@@ -74,6 +74,7 @@
     }
 
     Ball.alpha(45);
+
     function MoveBall() {
         ctx.clearRect(0, 0, c.width, c.height - Bar.height);
         ctx.clearRect(0, GameBoard.height - Bar.height, Bar.x, Bar.height);
@@ -98,15 +99,19 @@
     function Load() {
         t = setInterval(MoveBall, 1);
     }
+
     function Reload() {
         ctx.clearRect(0, 0, c.width, c.height);
+        Ball.x = 400;
+        Ball.y = 570;
+        Ball.speedX = 1
+        Ball.speedY = -1
+        Bar.x = 300;
         DrawBall();
         DrawBar();
-        Ball.x = 400;
-        Ball.y = 570;???
-        Bar.X = 300;
-        t = setInterval(MoveBall, 1);
+        Load();
     }
+
     window.onkeydown = function (e) {
         if (e.keyCode === 37) {
             if (Bar.x > 0) {
